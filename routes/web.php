@@ -27,7 +27,7 @@ Route::post('/reg',"LoginController@reg");
 Route::post('/login',"LoginController@login");
 Route::get('/center',"LoginController@center")->middleware('verify.token','count');
 
-Route::get('/test1',"TestController@test1")->middleware('count');
+Route::get('/test1',"TestController@test1");
 
 Route::get('/aes1',"TestController@aes1");
 Route::any('/dec',"TestController@dec");
@@ -36,4 +36,7 @@ Route::get('/rsa1',"TestController@rsa1");
 Route::get('/aesdec',"TestController@aesdec");
 Route::get('/test/sing1','TestController@sing1');
 
+Route::get('/testpay','TestController@pay');
+
+Route::get('/pay','TestController@testpay');
  
